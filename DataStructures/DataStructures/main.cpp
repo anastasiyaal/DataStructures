@@ -6,9 +6,13 @@
 //
 
 #include <iostream>
+#include "TVector.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    TVector<int> t(4);
+    std::cin >> t;
+    std::cout << t;
+    
+    
     return 0;
 }
