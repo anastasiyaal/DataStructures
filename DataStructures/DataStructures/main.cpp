@@ -13,6 +13,13 @@ int main(int argc, const char * argv[]) {
     std::cin >> t;
     std::cout << t;
     
+    t.Insert(4, 78);
+    
+    std::cout << t;
+    
+    t.Remove(2);
+    
+    std::cout << t;
     
     return 0;
 }
