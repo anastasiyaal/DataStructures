@@ -7,19 +7,61 @@
 
 #include <iostream>
 #include "TVector.h"
+#include "TList.h"
 
 int main(int argc, const char * argv[]) {
-    TVector<int> t(4);
-    std::cin >> t;
-    std::cout << t;
+//    TVector<int> t(4);
+//    std::cin >> t;
+//    std::cout << t;
+//    
+//    t.Insert(4, 78);
+//    
+//    std::cout << t;
+//    
+//    t.Remove(2);
+//    
+//    std::cout << t;
     
-    t.Insert(4, 78);
+    TList<int> l;
+    int t1 = 4;
+    int* t2 = new int(3);
+    int* t3 = new int(6);
+    l.Add(&t1);
+    l.Add(t2);
+    l.Add(t3);
     
-    std::cout << t;
+    for(size_t i = 0; i < l.GetSize(); ++i) {
+        std::cout << *(l[i].GetData()) << " ";
+    }
+    std::cout << std::endl;
     
-    t.Remove(2);
+    l.Remove(2);
     
-    std::cout << t;
+    int t4 = 5;
+    l.Add(&t4);
+    
+    for(size_t i = 0; i < l.GetSize(); ++i) {
+        std::cout << *(l[i].GetData()) << " ";
+    }
+    std::cout << std::endl;
+    
+    int t5 = 99;
+    l.Insert(3, &t5);
+    
+    for(size_t i = 0; i < l.GetSize(); ++i) {
+        std::cout << *(l[i].GetData()) << " ";
+    }
+    std::cout << std::endl;
+    
+    TList<int> f(std::move(l));
+    
+    for(size_t i = 0; i < f.GetSize(); ++i) {
+        std::cout << *(f[i].GetData()) << " ";
+    }
+    std::cout << std::endl;
+    
+    
+    f.Clear();
     
     return 0;
 }
