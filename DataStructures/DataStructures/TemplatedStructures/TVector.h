@@ -16,6 +16,7 @@ template<typename T>
 class TVector {
 private:
     T* data;
+//    T* data = new T[0];
     size_t length; //текущий размер вектора
 //    size_t capacity; //общее кол-во элементов в векторе
 public:

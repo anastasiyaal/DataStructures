@@ -8,6 +8,7 @@
 #include <iostream>
 #include "TVector.h"
 #include "TList.h"
+#include "TStack.h"
 
 int main(int argc, const char * argv[]) {
 //    TVector<int> t(4);
@@ -62,6 +63,23 @@ int main(int argc, const char * argv[]) {
     
     
     f.Clear();
+    
+    
+//    TStack<int> t;
+//    t.Push(3);
+//    t.Push(5);
+//    std::cout << t.Top() << std::endl;
+//    t.Top() = 9;
+//    std::cout << t.Top() << std::endl;
+//    
+//    t.Pop();
+//    std::cout << t.Top() << std::endl;
+//    //t.Clear();
+//    
+//    
+//    TStack<int> f(t);
+//    std::cout << f.Top() << std::endl;
+//    
     
     return 0;
 }

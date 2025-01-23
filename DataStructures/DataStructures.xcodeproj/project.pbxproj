@@ -27,6 +27,7 @@
 		85B044852D3BA8C200B96F69 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		85B0448F2D3BABCA00B96F69 /* TVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVector.h; sourceTree = "<group>"; };
 		85B044902D3E4D1600B96F69 /* TList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TList.h; sourceTree = "<group>"; };
+		85B044912D3F9DB200B96F69 /* TStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TStack.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 			children = (
 				85B0448F2D3BABCA00B96F69 /* TVector.h */,
 				85B044902D3E4D1600B96F69 /* TList.h */,
+				85B044912D3F9DB200B96F69 /* TStack.h */,
 			);
 			path = TemplatedStructures;
 			sourceTree = "<group>";
