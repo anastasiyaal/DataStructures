@@ -16,8 +16,8 @@
 template<typename T>
 class TListData {
 public:
-    TListData(T* _data) : data(_data) {}
-    T*& GetData() {
+    TListData(T _data) : data(_data) {}
+    T& GetData() {  
         return data;
     }
 private:
@@ -29,7 +29,7 @@ private:
         return next;
     }
     TListData<T>* next;
-    T* data;
+    T data;
     template<typename U>
     friend class TList;
 };
@@ -45,7 +45,7 @@ public:
         src.tail = nullptr;
         src.current_size = 0;
     }
-    void Add(T* data) {
+    void Add(T data) {
         if(!current_size) {
             head = new TListData<T>(data);
             tail = head;
@@ -90,7 +90,7 @@ public:
         return *current;
     }
     
-    void Insert(size_t index, T* value) {
+    void Insert(size_t index, T value) {
         if(index > current_size) {
             throw std::out_of_range("index must be less or equal than size");
         }

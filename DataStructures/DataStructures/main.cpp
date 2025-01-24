@@ -23,47 +23,82 @@ int main(int argc, const char * argv[]) {
 //    
 //    std::cout << t;
     
+//    TList<int> l;
+//    int t1 = 4;
+//    int* t2 = new int(3);
+//    int* t3 = new int(6);
+//    l.Add(&t1);
+//    l.Add(t2);
+//    l.Add(t3);
+//    
+//    for(size_t i = 0; i < l.GetSize(); ++i) {
+//        std::cout << *(l[i].GetData()) << " ";
+//    }
+//    std::cout << std::endl;
+//    
+//    l.Remove(2);
+//    
+//    int t4 = 5;
+//    l.Add(&t4);
+//    
+//    for(size_t i = 0; i < l.GetSize(); ++i) {
+//        std::cout << *(l[i].GetData()) << " ";
+//    }
+//    std::cout << std::endl;
+//    
+//    int t5 = 99;
+//    l.Insert(3, &t5);
+//    
+//    for(size_t i = 0; i < l.GetSize(); ++i) {
+//        std::cout << *(l[i].GetData()) << " ";
+//    }
+//    std::cout << std::endl;
+//    
+//    TList<int> f(std::move(l));
+//    
+//    for(size_t i = 0; i < f.GetSize(); ++i) {
+//        std::cout << *(f[i].GetData()) << " ";
+//    }
+//    std::cout << std::endl;
+//    
+//    
+//    f.Clear();
+    
     TList<int> l;
-    int t1 = 4;
-    int* t2 = new int(3);
-    int* t3 = new int(6);
-    l.Add(&t1);
-    l.Add(t2);
-    l.Add(t3);
-    
+    l.Add(4);
+    l.Add(3);
+    l.Add(5);
     for(size_t i = 0; i < l.GetSize(); ++i) {
-        std::cout << *(l[i].GetData()) << " ";
+        std::cout << (l[i].GetData()) << " ";
     }
     std::cout << std::endl;
-    
+
     l.Remove(2);
-    
-    int t4 = 5;
-    l.Add(&t4);
-    
+
+    l.Add(5);
+
     for(size_t i = 0; i < l.GetSize(); ++i) {
-        std::cout << *(l[i].GetData()) << " ";
+        std::cout << (l[i].GetData()) << " ";
     }
     std::cout << std::endl;
-    
-    int t5 = 99;
-    l.Insert(3, &t5);
-    
+
+    l.Insert(3, 99);
+
     for(size_t i = 0; i < l.GetSize(); ++i) {
-        std::cout << *(l[i].GetData()) << " ";
+        std::cout << (l[i].GetData()) << " ";
     }
     std::cout << std::endl;
-    
+
     TList<int> f(std::move(l));
-    
+
     for(size_t i = 0; i < f.GetSize(); ++i) {
-        std::cout << *(f[i].GetData()) << " ";
+        std::cout << (f[i].GetData()) << " ";
     }
     std::cout << std::endl;
-    
-    
+
+
     f.Clear();
-    
+
     
 //    TStack<int> t;
 //    t.Push(3);
